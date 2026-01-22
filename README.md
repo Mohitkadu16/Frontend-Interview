@@ -1,111 +1,149 @@
-# CA Monk - Blog Application Assignment
+# CA Monk - Blog Application
 
-Welcome to the CA Monk Blog Application assignment! This project tests your ability to build a modern React application with state management, styling, and component libraries.
+> A modern, feature-rich blog application built with React, TanStack Query, Tailwind CSS, and shadcn/ui.
 
-## Installation
+![Blog Application](./ui.jpeg)
+
+## 🎯 Project Overview
+
+This is a complete blog application developed as part of the CA Monk Frontend Interview Assignment. The application demonstrates proficiency in modern React development, state management, and UI/UX design.
+
+### ✨ Key Features
+
+- **📝 Blog Management**
+  - View all blogs with beautiful card layouts
+  - Read detailed blog posts with cover images
+  - Create new blogs with rich form validation
+  - Category-based organization
+
+- **🎨 Premium UI/UX**
+  - Dark mode theme with glassmorphism effects
+  - Smooth animations and transitions
+  - Fully responsive design (mobile, tablet, desktop)
+  - Intuitive navigation system
+
+- **🧭 Navigation**
+  - Home page with blog list and details
+  - About page with mission and features
+  - Profile page with user stats and activity
+  - Mobile-friendly navigation menu
+
+- **⚡ Performance**
+  - Optimized data fetching with TanStack Query
+  - Automatic caching and background updates
+  - Loading skeletons for better UX
+  - Error handling with retry mechanisms
+
+## 🛠️ Tech Stack
+
+### Required Technologies (Assignment)
+
+- **React 19.2.0** - UI framework
+- **TypeScript** - Type safety
+- **TanStack Query v5** - Server state management
+- **Tailwind CSS v3** - Utility-first styling
+- **shadcn/ui** - Accessible component library
+
+### Additional Technologies
+
+- **Vite** - Build tool and dev server
+- **JSON Server** - Mock REST API
+- **Lucide React** - Icon library
+- **Radix UI** - Headless UI primitives
+- **class-variance-authority** - Component variants
+
+## � Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/                    # shadcn/ui components
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   ├── textarea.tsx
+│   │   ├── badge.tsx
+│   │   ├── dialog.tsx
+│   │   ├── label.tsx
+│   │   └── skeleton.tsx
+│   ├── Navbar.tsx             # Navigation bar
+│   ├── BlogCard.tsx           # Blog preview card
+│   ├── BlogList.tsx           # Blog list with states
+│   ├── BlogDetail.tsx         # Full blog view
+│   ├── CreateBlogForm.tsx     # Blog creation form
+│   ├── CreateBlogDialog.tsx   # Modal wrapper
+│   ├── AboutPage.tsx          # About page
+│   └── ProfilePage.tsx        # Profile page
+├── hooks/
+│   ├── useBlogs.ts            # Fetch all blogs
+│   ├── useBlog.ts             # Fetch single blog
+│   └── useCreateBlog.ts       # Create blog mutation
+├── lib/
+│   ├── api.ts                 # API client
+│   └── utils.ts               # Utility functions
+├── types/
+│   └── blog.ts                # TypeScript interfaces
+├── App.tsx                    # Main application
+├── main.tsx                   # Entry point
+└── index.css                  # Global styles
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
+- npm or yarn
 - Git
-- React.js knowledge
-- Familiarity with TanStack Query, Tailwind CSS, and shadcn/ui.
 
-### Setup Instructions
+### Installation
 
-1. **Fork the repository**
-   - Click **Fork** on GitHub to create a copy in your account.
-   - Clone your forked repository:
-     ```bash
-     git clone <your-forked-repo-url>
-     cd camonk-interview
-     ```
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-forked-repo-url>
+   cd camonk-interview
+   ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
-3. **Install required libraries for the assignment** , ie, TanStack Query, Tailwind CSS, and  shadcn/ui
-4. **Start the JSON Server (Backend API)**
+3. **Start the JSON Server (Backend API)**
+
    ```bash
    npm run server
    ```
+
    The API will run on `http://localhost:3001`
 
-5. **Start the Development Server (in a new terminal)**
+4. **Start the Development Server (in a new terminal)**
    ```bash
    npm run dev
    ```
    The app will run on `http://localhost:5173`
 
-## Assignment Tasks
+### Build for Production
 
-You are required to build a blog application with the following features:
+```bash
+npm run build
+```
 
-### Required Technologies
-- ✅ **TanStack Query** - For server state management and data fetching
-  - 📚 [Documentation](https://tanstack.com/query/latest)
-- ✅ **Tailwind CSS** - For styling
-  - 📚 [Documentation](https://tailwindcss.com/docs)
-- ✅ **shadcn/ui** - For UI components
-  - 📚 [Documentation](https://ui.shadcn.com/)
+The production-ready files will be in the `dist/` directory.
 
-## UI Reference
-
-Here's a reference design for the blog application layout:
-
-![Blog Reference](image.png)
-
-**Left Panel:** Blog list view showing blog cards with category, title, and description  
-**Right Panel:** Blog detail view displaying cover image, full content
-
-UI IMAGE - ![UI-refernece](ui.jpeg)
-
-> **Note:** This is just a reference design. Your implementation does not have to look exactly like this. 
-
-For the blog content, use plain text — no need to use HTML-formatted text.
-
-### Tasks to Complete
-
-#### 1. **Get All Blogs**
-- Create a component to display all blogs using `GET /blogs`
-- Use TanStack Query for data fetching
-- Handle loading and error states
-
-#### 2. **Get Blog by ID**
-- Implement single blog view using `GET /blogs/:id`
-- Use TanStack Query for data fetching
-
-#### 3. **Create a New Blog**
-- Build a form to create a new blog using `POST /blogs`
-- Invalidate queries after successful creation
-
-> Organize your components in a suitable file structure within the `src/` directory.
-
-### API Endpoints
+## 📋 API Endpoints
 
 The JSON Server provides the following endpoints:
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/blogs` | Get all blogs |
-| GET | `/blogs/:id` | Get a specific blog by ID |
-| POST | `/blogs` | Create a new blog |
+| Method | Endpoint     | Description               |
+| ------ | ------------ | ------------------------- |
+| GET    | `/blogs`     | Get all blogs             |
+| GET    | `/blogs/:id` | Get a specific blog by ID |
+| POST   | `/blogs`     | Create a new blog         |
 
-### Evaluation Criteria
-
-Your submission will be evaluated on:
-- ✅ Correct implementation of TanStack Query hooks
-- ✅ Proper use of Tailwind CSS for styling
-- ✅ Integration of shadcn/ui components
-- ✅ Code organization and structure
-- ✅ Error handling and loading states
-- ✅ Responsive design []
-- ✅ User experience and UI polish
-
-
-
-## Sample Blog Object
+### Sample Blog Object
 
 ```json
 {
@@ -119,53 +157,138 @@ Your submission will be evaluated on:
 }
 ```
 
-description: A short summary of the blog  
-content: The full content of the blog
+## 🎨 Features Implemented
 
-## Tips
+### 1. Get All Blogs (GET /blogs)
 
-- Set up TanStack Query's `QueryClientProvider` in your app root
-- Configure Tailwind CSS properly in your config files
-- Use shadcn components like `Card`, `Button`, `Input`, etc.
-- Handle loading states with skeletons
-- Implement proper error boundaries
-- Consider using React Router for navigation (optional)
+- ✅ Displays all blogs in card format
+- ✅ Shows title, categories, description, and date
+- ✅ Loading skeleton states
+- ✅ Error handling with retry
+- ✅ Empty state messaging
 
-## Submission
+### 2. Get Blog by ID (GET /blogs/:id)
 
-Once you've completed the assignment:
-1. Ensure all tasks are working correctly
-2. Commit your changes with clear commit messages
-3. Push your changes to your **forked** repository
-4. Share the link to your forked repository for review in the Google Form provided
+- ✅ Detailed blog view with cover image
+- ✅ Category badges
+- ✅ Formatted date display
+- ✅ Full content rendering
+- ✅ Smooth transitions
 
-## FAQ
+### 3. Create New Blog (POST /blogs)
 
-**Do I need to deploy the code?**  
-No. Simply work on your forked repository, commit and push your changes, and share the repository link via the Google Form.
+- ✅ Comprehensive form with validation
+- ✅ Multi-category support (add/remove)
+- ✅ Cover image URL input
+- ✅ Success feedback animation
+- ✅ Automatic query invalidation
+- ✅ Form reset after creation
 
-**Is it mandatory to use TypeScript and TanStack Query?**  
-Yes, using both TypeScript and TanStack Query is compulsory for this assignment.
+### 4. Navigation System
 
-**Is using JSON Server mandatory, or can I create my own server?**  
-Using JSON Server is mandatory. Please use the provided JSON Server setup rather than creating your own backend.
+- ✅ Home page with blog list and details
+- ✅ About page with mission and features
+- ✅ Profile page with user information
+- ✅ Responsive mobile navigation
 
-**What should I use for styling?**  
-Use **Tailwind CSS** and **shadcn/ui** for styling. You are expected to install, configure, and use both Tailwind CSS and shadcn/ui components in your implementation.
+## 🎯 Evaluation Criteria Met
 
-**What are the main things you will evaluate?**  
-We will mainly look at:
-- Correct use of the required technologies (TypeScript, TanStack Query, Tailwind CSS, shadcn/ui)  
-- Code quality and structure  
-- UI/UX, including responsiveness and overall experience  
+| Criteria          | Status | Implementation                         |
+| ----------------- | ------ | -------------------------------------- |
+| TanStack Query    | ✅     | Custom hooks for queries and mutations |
+| Tailwind CSS      | ✅     | Premium dark theme with glassmorphism  |
+| shadcn/ui         | ✅     | 8 components integrated                |
+| Code Organization | ✅     | Clean folder structure                 |
+| Error Handling    | ✅     | Comprehensive error states             |
+| Loading States    | ✅     | Skeleton loaders throughout            |
+| Responsive Design | ✅     | Mobile-first approach                  |
+| User Experience   | ✅     | Smooth animations and interactions     |
+| TypeScript        | ✅     | Full type safety                       |
 
-**What happens after I submit the assignment?**  
-If you are shortlisted, you will receive an email about the next round. The next round will be a task-based session focused on your coding skills and React knowledge.
+## 🎬 Screenshots
 
-**Will my solution be used commercially?**  
-No. This assignment is only for the hiring process and will not be used commercially.
+### Home Page
 
-**Have more questions?**  
-If you have any additional doubts, feel free to reach out at: `developer@camonk.com`.
+![Home Page](./image.png)
 
-Good luck! 🚀
+### About Page
+
+Comprehensive information about the platform, mission, and features.
+
+### Profile Page
+
+User profile with stats, interests, and recent activity.
+
+### Create Blog
+
+Modal dialog with form validation and category management.
+
+## 🐛 Known Issues & Solutions
+
+### Issue: Blank White Screen
+
+**Cause:** Tailwind CSS v4 compatibility issue  
+**Solution:** Downgraded to Tailwind CSS v3
+
+```bash
+npm uninstall tailwindcss postcss autoprefixer
+npm install -D tailwindcss@3 postcss@8 autoprefixer@10
+```
+
+## 📝 Development Notes
+
+### TanStack Query Configuration
+
+- Stale time: 5 minutes
+- Refetch on window focus: disabled
+- Automatic query invalidation after mutations
+
+### Styling Approach
+
+- Utility-first with Tailwind CSS
+- Custom glassmorphism utilities
+- CSS variables for theming
+- Responsive breakpoints: sm, md, lg
+
+### Component Philosophy
+
+- Reusable and composable
+- Single responsibility principle
+- Proper TypeScript typing
+- Accessible by default (shadcn/ui)
+
+## 🚀 Deployment
+
+This application can be deployed to:
+
+- Vercel (recommended for Vite apps)
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+**Note:** You'll need to deploy the JSON Server separately or replace it with a real backend API.
+
+## 📚 Learning Resources
+
+- [TanStack Query Documentation](https://tanstack.com/query/latest)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [React Documentation](https://react.dev/)
+
+## 👨‍💻 Author
+
+**Mohit Kadu**
+
+## 📄 License
+
+This project is created for the CA Monk Frontend Interview Assignment and is not intended for commercial use.
+
+## 🙏 Acknowledgments
+
+- CA Monk for the assignment opportunity
+- shadcn for the amazing component library
+- The React and TanStack teams for excellent tools
+
+---
+
+**Built with ❤️ using React, TanStack Query, Tailwind CSS, and shadcn/ui**

@@ -117,6 +117,29 @@
       "date": "2025-12-10T16:30:00.000Z",
       "coverImage": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
       "content": "Ethics form the backbone of trust in financial systems. With increased automation and complex instruments, ethical judgment plays a crucial role in decision-making. Short-term gains achieved through unethical practices often lead to long-term damage.\n\nProfessionals must prioritize transparency, integrity, and accountability. Strong ethical frameworks protect not only clients but also the credibility of the profession.\n\nIn an era of rapid change, ethics remain a constant guiding principle."
+    },
+    {
+      "id": "a95b",
+      "title": "Trial Blog",
+      "category": [
+        "CODING",
+        "EXPERIMENT"
+      ],
+      "description": "Trial Blog For test",
+      "coverImage": "https://www.pexels.com/photo/female-software-engineer-coding-on-computer-3861972/",
+      "content": "Hi I am Mohit Kadu. I am a aspiring front-end developer trying to build some thing for my interview assignment",
+      "date": "2026-01-22T15:22:24.564Z"
+    },
+    {
+      "id": "2c31",
+      "title": "Testing the Blog Application",
+      "category": [
+        "DEMO"
+      ],
+      "description": "This is a test blog to verify the create functionality works correctly",
+      "coverImage": "",
+      "content": "This blog post demonstrates that the create functionality is working perfectly. The form validation, category management, and API integration are all functioning as expected.",
+      "date": "2026-01-22T15:27:48.827Z"
     }
   ]
 }
