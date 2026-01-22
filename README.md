@@ -2,7 +2,7 @@
 
 > A modern, feature-rich blog application built with React, TanStack Query, Tailwind CSS, and shadcn/ui.
 
-![Blog Application](./src/assets/ui img.jpeg)
+![Blog Application](./src/assets/ui%20img.jpeg)
 
 ## 🎯 Project Overview
 
