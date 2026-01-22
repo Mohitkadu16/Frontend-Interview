@@ -2,7 +2,7 @@
 
 > A modern, feature-rich blog application built with React, TanStack Query, Tailwind CSS, and shadcn/ui.
 
-![Blog Application](./ui.jpeg)
+![Blog Application](./src/assets/ui img.jpeg)
 
 ## 🎯 Project Overview
 
@@ -209,9 +209,11 @@ The JSON Server provides the following endpoints:
 
 ### Home Page
 
-![Home Page](./image.png)
+![Home Page](./src/assets/ui%20img.jpeg)
 
 ### About Page
+
+![About Page](./src/assets/about%20img.jpeg)
 
 Comprehensive information about the platform, mission, and features.
 
